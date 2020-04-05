@@ -1,14 +1,27 @@
 package designpattern
 
-import designpattern.factory.animalFactory
-import designpattern.factory.catFactory
+import designpattern.factory.Animal
+import designpattern.factory.AnimalFactory
+
 
 fun main(args: Array<String>) {
-//val cat = catFactory()
+    val listOfAnimal = listOf(
+        "dog" to "beagle",
+        "dog" to "bulldog",
+        "cat" to "persian",
+        "dog" to "bulldog",
+        "cat" to "mexican",
+        "dog" to "bulldog",
+        "cat" to "persian",
+        "cat" to "mexican"
+    )
+    val animalFactory = AnimalFactory()
+    val animalStore = mutableListOf<Animal>()
 
-    val  cat = animalFactory("cat")
-    val dog = animalFactory("dog")
+    for ((animal, breed) in listOfAnimal) {
+        animalStore.add(animalFactory.animalFactory(animal, breed))
+    }
 
-    println("Cat created: " + cat.name)
-    println("Dog Created: " + dog.name)
+    println("Printing animals")
+    animalStore.forEach { println("${it.id} - name: ${it.name}") }
 }
