@@ -1,8 +1,6 @@
 package designpattern.factory.cats
 
 import designpattern.factory.Animal
-import designpattern.factory.dogs.Beagle
-import designpattern.factory.dogs.BullDog
 
 class CatFactory {
 

@@ -1,6 +1,5 @@
 package designpattern.factory
 
-import designpattern.factory.cats.Cat
 import designpattern.factory.cats.CatFactory
 import designpattern.factory.dogs.DogFactory
 
