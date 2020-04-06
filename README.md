@@ -3,7 +3,7 @@
 #Testing Factory implementation
 
 
-  ```
+ ````
  val listOfAnimal = listOf(
         "dog" to "beagle",
         "dog" to "bulldog",
@@ -23,5 +23,4 @@
 
     println("Printing animals")
     animalStore.forEach { println("${it.id} - name: ${it.name}") }
-    
-    ```
+````
